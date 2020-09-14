@@ -44,12 +44,14 @@ header {
     padding-top: 30px;
     position: fixed;
     left: 0;
-    width: 300px;
+    width: 280px;
     height: 100%;
+    transition: .5s;
+    transition-property: left;
 }
 .sidebar .profile-image {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border-radius: 100px;
     margin-bottom: 10px;
 }
@@ -75,3 +77,31 @@ header {
 .sidebar i {
     padding-right: 15px;
 }
+
+label #sidebar-btn {
+    z-index: 1;
+    color: #fff;
+    position: fixed;
+    cursor: pointer;
+    left: 300px;
+    font-size: 20px;
+    margin: 5px 0;
+    padding-top: 5px;
+    transition: .5s;
+    transition-property: color;
+}
+label #sidebar-btn:hover {
+    color: palevioletred;
+}
+#check:checked ~ .sidebar {
+    left: -200px;
+}
+#check:checked ~ .sidebar a span {
+    display: none;
+}
+#check:checked ~ .sidebar a {
+    font-size: 20px;
+    margin-left: 190px;
+    width: 80px;
+}
+
